@@ -26,7 +26,7 @@ export default class SelectSong extends Component {
 
   updateFilter = (e) => {
       this.setState({filter : e.target.value, 
-        songsFiltered : allSongs.map(t => t.includes(e.target.value))
+        songsFiltered : allSongs.filter(t => t.includes(e.target.value))
     })
   }
 }
