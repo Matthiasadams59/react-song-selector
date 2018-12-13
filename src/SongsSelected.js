@@ -3,8 +3,8 @@ import React, { Component } from 'react'
 export default class SongsSelected extends Component {
 	render() {
 		return (
-			<div>
-				Songs selected :
+			<div className="bs-col-6-knockoff">
+				<h2>Songs selected :</h2>
         		<ul>
 					{this.renderSongs()}
 				</ul>

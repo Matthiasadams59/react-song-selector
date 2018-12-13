@@ -16,9 +16,11 @@ class App extends Component {
 
 	render() {
 		return (
-			<div>
-				<SongFilter selectSong={this.handler} />
-				<SongsSelected songsSelected={this.state.songsSelected} selectSong={this.handler}/>
+			<div className="bs-container-knockoff">
+				<div className="bs-row-knockoff">
+					<SongFilter selectSong={this.handler} />
+					<SongsSelected songsSelected={this.state.songsSelected} selectSong={this.handler} />
+				</div>
 			</div>
 		);
 	}

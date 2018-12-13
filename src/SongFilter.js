@@ -15,9 +15,10 @@ export default class SongFilter extends Component {
 
 	render() {
 		return (
-			<div>
+			<div className="bs-col-6-knockoff">
+				<h2>Queen's Discography</h2>
 				<label htmlFor="songFilter">Select a song: </label>
-				<input type="text" value={this.state.filter} onChange={this.updateFilter} id="songFilter"></input>
+				<input type="text" value={this.state.filter} onChange={this.updateFilter} id="songFilter" placeholder="Type a song title..."></input>
 				{this.state.showResults ? <ListSongs selectSong={this.props.selectSong} songselection={this.state.songsFiltered} /> : null}
 			</div>
 		)

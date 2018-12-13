@@ -12,3 +12,50 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.bs-col-6-knockoff {
+  width: 50%;
+  float: left;
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+
+.bs-row-knockoff {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.bs-row-knockoff:before, .bs-row-knockoff:after, .bs-container-knockoff:before, .bs-container-knockoff:after {
+  display: table;
+  content: " ";
+}
+
+.bs-row-knockoff:after, .bs-container-knockoff:after {
+  clear: both;
+}
+
+.bs-container-knockoff {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .bs-container-knockoff {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .bs-container-knockoff {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .bs-container-knockoff {
+    width: 1170px;
+  }
+}
