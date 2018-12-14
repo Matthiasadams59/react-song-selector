@@ -29,7 +29,7 @@ export default class SongFilter extends Component {
 		this.setState({
 			filter: filterText,
 			showResults: filterText !== '',
-			songsFiltered: allSongs.filter(t => t.includes(filterText))
+			songsFiltered: allSongs.filter(t => t.toLowerCase().includes(filterText.toLowerCase()))
 		})
 	}
 }
