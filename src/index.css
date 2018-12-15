@@ -11,8 +11,39 @@ body {
   background-size: 100%;
 }
 
+input {
+  width: 97%;
+  padding: 16px 8px;
+  font-size: 16px;
+  outline: none;
+  background-color: rgb(96, 12, 129);
+  border: none;
+  color: #5C393D;
+}
+
+ul {
+  list-style-type: none;
+  margin-top: 10px;
+  padding: 0;
+}
+
+
+li {
+  position: relative;
+  border-radius: 8px;
+  color: #303030;
+  padding: 1em;
+  display: block;
+  text-decoration: none;
+  border: 1px dashed #3b9fe2;
+  background: rgba(59,159,226,.15);
+}
+
 li:hover {
-  background-color: #6e7aea;
+  outline: none;
+  background: white;
+  color: #3b9fe2;
+  box-shadow: 0 0 .3em silver;
 }
 
 code {
