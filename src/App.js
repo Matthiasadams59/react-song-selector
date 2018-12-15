@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import SongFilter from './SongFilter';
 import SongsSelected from './SongsSelected'
+import Bites_the_dust from './Bites_the_dust.mp3'
+import thank_you from './thank_you.m4a'
 
 class App extends Component {
 	constructor() {
@@ -23,6 +25,7 @@ class App extends Component {
 				</div>
 			</div>
 		);
+		
 	}
 
 	handler = (event) => {
@@ -31,12 +34,15 @@ class App extends Component {
 			this.setState(prevState => ({
 				songsSelected: [...prevState.songsSelected, song]
 			}))
+			new Audio(thank_you).play();
 		} else {
 			this.setState(prevState => ({
 				songsSelected: prevState.songsSelected.filter(selectedSong => selectedSong !== song)
 			}))
+			new Audio(Bites_the_dust).play();
 		}
 	}
+
 }
 
 export default App;

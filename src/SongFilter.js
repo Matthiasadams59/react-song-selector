@@ -9,7 +9,7 @@ export default class SongFilter extends Component {
 		this.state = {
 			songsFiltered: allSongs,
 			filter: '',
-			showResults: false
+			showResults: true
 		}
 	}
 

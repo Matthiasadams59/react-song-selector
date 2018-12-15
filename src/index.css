@@ -6,6 +6,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('bohemian-rhapsody-movie-background-wallpaper-65807-68045-hd-wallpapers.jpg');
+  color: white;
+  background-size: 100%;
+}
+
+li:hover {
+  background-color: #6e7aea;
 }
 
 code {
