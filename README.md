@@ -1,6 +1,6 @@
 
 # react-song-selector
-TP on modern Web basics (HTML, CSS and especially JavaScript but also npm commands )
+TP on modern Web basics (JavaScript ES6/React)  
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Deployment
@@ -19,8 +19,8 @@ The project will start on localhost:3000
 
 * Node.js
 * Babel
-* Webpack
-* Bootstrap
+* Webpack  
+* React
 
 ## Requirements
 
