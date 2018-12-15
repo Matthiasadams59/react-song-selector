@@ -5,7 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Deployment
 
-At the root the project :
+At the root of the project :
 ```
 npm install
 ```
