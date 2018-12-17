@@ -1,16 +1,23 @@
 import React, { Component } from 'react'
-import { allSongs } from './songs'
+//import { allSongs } from './songs'
+import PropTypes from 'prop-types';
 import ListSongs from './ListSongs'
+import Axios from 'axios';
 
-export default class SongFilter extends Component {
+class SongFilter extends Component {
 	constructor() {
 		super()
 
 		this.state = {
-			songsFiltered: allSongs,
+			//songsFiltered: allSongs,
+			songsFiltered: [],
 			filter: '',
 			showResults: false
 		}
+	}
+
+	componentDidMount() {
+
 	}
 
 	render() {
@@ -24,12 +31,30 @@ export default class SongFilter extends Component {
 		)
 	}
 
-	updateFilter = (e) => {
+	updateFilter = async (e) => {
 		const filterText = e.target.value
-		this.setState({
-			filter: filterText,
-			showResults: filterText !== '',
-			songsFiltered: allSongs.filter(t => t.toLowerCase().includes(filterText.toLowerCase()))
-		})
+
+		try {
+			const axiosFiltered = await Axios.get("http://localhost:8081/"+filterText);
+			this.setState({
+				filter: filterText,
+				showResults: filterText !== '',
+				songsFiltered: axiosFiltered.data ? axiosFiltered.data : []
+			})
+
+			console.log(axiosFiltered)
+		} catch {
+			this.setState({
+				filter: filterText,
+				showResults: filterText !== '',
+				songsFiltered: []
+			})
+		}
 	}
 }
+
+SongFilter.propTypes = {
+    selectSong: PropTypes.func.isRequired
+}
+
+export default SongFilter;

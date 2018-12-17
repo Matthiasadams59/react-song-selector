@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import Song from './Song'
 
-export default class ListSongs extends Component {
+class ListSongs extends Component {
 
     render() {
         return (
@@ -12,10 +14,15 @@ export default class ListSongs extends Component {
 
     renderSongs = () => {
         return this.props.songselection.map((song, index) => (
-            <li key={index} onClick={this.props.selectSong} >
-                {song}
-            </li>
+            <Song  song = {song} index = {index} selectSong = {this.props.selectSong} />
 
         ))
     }
 }
+
+ListSongs.propTypes = {
+    songselection: PropTypes.array.isRequired,
+    selectSong: PropTypes.func.isRequired,
+}
+
+export default ListSongs

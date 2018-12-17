@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
-export default class SongsSelected extends Component {
+class SongsSelected extends Component {
 	render() {
 		return (
 			<div className="bs-col-6-knockoff">
@@ -35,3 +36,9 @@ export default class SongsSelected extends Component {
 		}
 	}
 }
+
+SongsSelected.propTypes = {
+	selectSong: PropTypes.func.isRequired
+}
+
+export default SongsSelected;
