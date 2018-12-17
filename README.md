@@ -4,7 +4,16 @@ TP on modern Web basics (JavaScript ES6/React)
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Deployment
-
+In the Api Folder : 
+```
+npm install
+```
+Then to start the server : 
+```
+node ./server.js
+```
+The server will start on localhost:8081  
+Then open a new terminal  
 At the root of the project :
 ```
 npm install
