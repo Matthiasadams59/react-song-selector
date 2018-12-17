@@ -14,7 +14,7 @@ class ListSongs extends Component {
 
     renderSongs = () => {
         return this.props.songselection.map((song, index) => (
-            <Song  song = {song} index = {index} selectSong = {this.props.selectSong} />
+            <Song song = {song} key = {index} selectSong = {this.props.selectSong} />
 
         ))
     }
