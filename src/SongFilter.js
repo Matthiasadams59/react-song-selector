@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 //import { allSongs } from './songs'
 import PropTypes from 'prop-types'
 import ListSongs from './ListSongs'
-import Axios from 'axios'
+import song_search_helper from "./helpers/song_search_helper"
 
 class SongFilter extends Component {
 	constructor() {
@@ -33,18 +33,12 @@ class SongFilter extends Component {
 	updateFilter = async (e) => {
 		const filterText = e.target.value
 
-		try {
-			const axiosFiltered = await Axios.get("http://localhost:8081/"+filterText)
+		song_search_helper(filterText, (result) => {
 			this.setState({
 				filter: filterText,
-				songsFiltered: axiosFiltered.data ? axiosFiltered.data : []
+				songsFiltered: result
 			})
-		} catch {
-			this.setState({
-				filter: filterText,
-				songsFiltered: []
-			})
-		}
+		})
 	}
 }
 
