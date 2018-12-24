@@ -6,9 +6,9 @@ const validate_helper = (songsSelected) => {
         }
         message = message.substr(0, message.length - 2)
         message += "\n\nNice choice!"
-        alert(message)
+        return message
     } else {
-        alert("You haven't selected any song for now! What a shame!")
+        return "You haven't selected any song for now! What a shame!"
     }
 }
 

@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-//import { allSongs } from './songs'
 import PropTypes from 'prop-types'
 import ListSongs from './ListSongs'
 import song_search_helper from "./helpers/song_search_helper"
@@ -9,7 +8,6 @@ class SongFilter extends Component {
 		super()
 
 		this.state = {
-			//songsFiltered: allSongs,
 			songsFiltered: [],
 			filter: ''
 		}

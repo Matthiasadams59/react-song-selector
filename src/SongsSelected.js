@@ -24,7 +24,7 @@ class SongsSelected extends Component {
 	}
 
 	validate = () => {
-		validate_helper(this.props.songsSelected)
+		alert(validate_helper(this.props.songsSelected))
 	}
 }
 
