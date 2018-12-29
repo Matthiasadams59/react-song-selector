@@ -13,3 +13,9 @@ it("retrieves an empty list when none of the song titles match the search text",
         expect(resultSongs).toEqual([])
     })
 })
+
+it("return an empty array if you search for an empty string", () => {
+    song_search_helper("", (resultSongs) => {
+        expect(resultSongs).toEqual([])
+    })
+})

@@ -6,7 +6,8 @@ const song_search_helper = async (filterText, callback) => {
     try {
         const axiosFiltered = await Axios.get("http://localhost:8081/"+filterText)
         result = axiosFiltered.data ? axiosFiltered.data : []
-    } catch {
+    } catch (error) {
+        console.log(error)
         result = []
     }
 
