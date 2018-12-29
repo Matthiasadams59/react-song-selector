@@ -22,6 +22,10 @@ Then to launch the project :
 ```
 npm start
 ```
+If you want to execute the tests : 
+```
+npm test
+```
 The project will start on localhost:3000
 
 ## Built with
